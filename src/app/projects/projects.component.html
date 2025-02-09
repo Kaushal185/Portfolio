@@ -2,8 +2,8 @@
   <h2>Projects</h2>
   <div class="project-grid">
     <div class="project-card" *ngFor="let project of projects; let i = index">
-      <img [src]="i === 0 ? 'assets/phonepe.png' : project.image" 
-           alt="{{ project.title }}" class="project-image">
+      <!-- <img [src]="i === 0 ? 'assets/projectImages/phonepe.png' : project.image" 
+           alt="{{ project.title }}" class="project-image"> -->
       <div class="project-info">
         <h3>{{ project.title }}</h3>
         <p><strong>Technologies:</strong> {{ project.technologies }}</p>

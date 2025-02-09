@@ -1,120 +1,119 @@
 /* ============================= */
-/*         ABOUT ME SECTION      */
+/*       ABOUT ME SECTION        */
 /* ============================= */
-
 .about-me {
-  background-color: #f9f9f9; /* Light background for contrast */
   padding: 60px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: #f9f9f9; /* Light background for contrast */
+  text-align: center;
 }
 
 .about-container {
+  max-width: 800px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
-  max-width: 700px; /* Restrict max width */
-  width: 100%;
-  gap: 30px;
-  padding: 20px;
-  background-color: white;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  gap: 40px;
 }
 
-/* Profile Picture */
 .profile-pic {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%; /* Circular image */
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #1976d2;
-  transition: transform 0.3s ease;
+  border: 4px solid #1976d2; /* Primary color */
 }
 
-.profile-pic:hover {
-  transform: scale(1.05);
-}
-
-/* Text Content */
 .about-text {
-  flex: 1; /* Take remaining space */
   text-align: left;
 }
 
 .about-text h1 {
-  font-size: 2.2rem;
-  color: #1976d2;
-  margin-bottom: 10px;
-}
-
-.tagline {
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-size: 2.5rem;
   color: #333;
   margin-bottom: 10px;
 }
 
-.description {
+.about-text .tagline {
+  font-size: 1.2rem;
+  color: #1976d2; /* Primary color */
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.about-text .description {
   font-size: 1rem;
   color: #555;
   line-height: 1.6;
+  margin-bottom: 20px;
 }
 
-/* ============================= */
-/*       RESPONSIVE DESIGN       */
-/* ============================= */
+/* Download Resume Button */
+.resume-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #1976d2; /* Primary color */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
 
-/* Tablets and Small Screens */
-@media (max-width: 1024px) {
+.resume-button:hover {
+  background-color: #0d47a1; /* Darker shade for hover */
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .about-container {
-    max-width: 90%;
     flex-direction: column;
     text-align: center;
-    padding: 30px;
   }
 
   .profile-pic {
     width: 150px;
     height: 150px;
-    margin-bottom: 15px;
+  }
+
+  .about-text {
+    text-align: center;
   }
 
   .about-text h1 {
     font-size: 2rem;
   }
 
-  .tagline {
-    font-size: 1.1rem;
+  .about-text .tagline {
+    font-size: 1rem;
   }
 
-  .description {
-    font-size: 0.95rem;
+  .about-text .description {
+    font-size: 0.9rem;
+  }
+
+  .resume-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
   }
 }
 
-/* Mobile Screens */
-@media (max-width: 600px) {
-  .about-container {
-    max-width: 95%;
-    padding: 20px;
-  }
-
-  .profile-pic {
-    width: 130px;
-    height: 130px;
-  }
-
+@media (max-width: 480px) {
   .about-text h1 {
     font-size: 1.8rem;
   }
 
-  .tagline {
-    font-size: 1rem;
+  .about-text .tagline {
+    font-size: 0.9rem;
   }
 
-  .description {
-    font-size: 0.9rem;
+  .about-text .description {
+    font-size: 0.85rem;
+  }
+
+  .resume-button {
+    padding: 8px 16px;
+    font-size: 0.85rem;
   }
 }

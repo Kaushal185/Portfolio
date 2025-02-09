@@ -2,47 +2,40 @@
   <span class="navbar-brand">My Portfolio</span>
   <span class="spacer"></span>
   <div class="nav-links">
-    <a mat-button routerLink="" routerLinkActive="active-link">Home</a>
-    <a mat-button routerLink="/education" routerLinkActive="active-link">Education</a>
-    <a mat-button routerLink="/experience" routerLinkActive="active-link">Experience</a>
-    <a mat-button routerLink="/projects" routerLinkActive="active-link">Projects</a>
-    <a mat-button routerLink="/skills" routerLinkActive="active-link">Skills</a>
-    <a mat-button routerLink="/certificates" routerLinkActive="active-link">Certificates</a>
+    <a mat-button (click)="scrollToSection('home')">Home</a>
+    <a mat-button (click)="scrollToSection('education')">Education</a>
+    <a mat-button (click)="scrollToSection('experience')">Experience</a>
+    <a mat-button (click)="scrollToSection('projects')">Projects</a>
+    <a mat-button (click)="scrollToSection('skills')">Skills</a>
   </div>
 </mat-toolbar>
 
-<!-- Content Wrapper for Scrollable Page -->
+<!-- Content Wrapper -->
 <div class="content">
-  <section id="home" class="section">
-    <app-header></app-header>
-  </section>
-  <section id="education" class="section">
-    <app-education></app-education>
-  </section>
-  <section id="experience" class="section">
-    <app-experience></app-experience>
-  </section>
-  <section id="projects" class="section">
-    <app-projects></app-projects>
-  </section>
-  <section id="skills" class="section">
-    <app-skills></app-skills>
-  </section>
-  <section id="certificates" class="section">
-    <app-certificates></app-certificates>
-  </section>
+  <section #home id="home" class="section"><app-header></app-header></section>
+  <section #education id="education" class="section"><app-education></app-education></section>
+  <section #experience id="experience" class="section"><app-experience></app-experience></section>
+  <section #projects id="projects" class="section"><app-projects></app-projects></section>
+  <section #skills id="skills" class="section"><app-skills></app-skills></section>
 </div>
 
-<!-- Footer -->
 <footer class="footer">
   <div class="footer-container">
-    <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
-
+    <p>&copy; 2025 My Portfolio. All Rights Reserved.</p>
     <div class="social-links">
-      <a href="tel:+1234567890" class="social-icon"><i class="fas fa-phone"></i></a>
-      <a href="mailto:youremail@example.com" class="social-icon"><i class="fas fa-envelope"></i></a>
-      <a href="https://github.com/yourprofile" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
-      <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+      <a [href]="'tel:' + contactInfo.phone" class="social-icon">
+        <i class="fas fa-phone"></i> {{ contactInfo.phone }}
+      </a>
+      <a [href]="'mailto:' + contactInfo.email" class="social-icon">
+        <i class="fas fa-envelope"></i> {{ contactInfo.email }}
+      </a>
+      <a [href]="contactInfo.github" target="_blank" class="social-icon">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <a [href]="contactInfo.linkedin" target="_blank" class="social-icon">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
     </div>
   </div>
 </footer>
+
