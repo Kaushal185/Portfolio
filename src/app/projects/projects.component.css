@@ -10,8 +10,7 @@
 .projects h2 {
   font-size: 2rem; /* Consistent with other sections */
   margin-bottom: 40px;
-  color: #1976d2; /* Primary color */
-  text-transform: uppercase; /* Consistent with other sections */
+  color: #000305; /* Primary color */
   letter-spacing: 1px; /* Consistent with other sections */
 }
 
