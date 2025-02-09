@@ -1,0 +1,79 @@
+/* General styling for the education section */
+.education {
+  font-family: 'Arial', sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styling */
+.education h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #0073e6;
+  padding-bottom: 10px;
+}
+
+/* Styling for each education entry */
+.education div {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.education div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Institution name and logo container */
+.institution {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Logo styling */
+.logo {
+  width: 40px; /* Adjust size as needed */
+  height: 40px; /* Adjust size as needed */
+  margin-right: 10px;
+  border-radius: 50%; /* Optional: Makes the logo circular */
+  object-fit: cover; /* Ensures the logo fits well */
+}
+
+/* Institution name */
+.education h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #0073e6;
+  margin: 0; /* Remove default margin */
+}
+
+/* Duration, degree, CGPA, and location */
+.education p {
+  font-size: 16px;
+  color: #555;
+  margin: 5px 0;
+}
+
+/* Highlight CGPA */
+.education p:nth-child(4) {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Location styling */
+.education p:last-child {
+  font-style: italic;
+  color: #777;
+}

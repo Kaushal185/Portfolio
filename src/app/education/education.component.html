@@ -1,0 +1,14 @@
+<div class="education">
+  <h2>Education</h2>
+  <div *ngFor="let edu of education">
+    <div class="institution">
+      <img [src]="'assets/pic.png'" alt="{{ edu.institution }} Logo" class="logo" />
+      <h3>{{ edu.institution }}</h3>
+    </div>
+    <p>{{ edu.duration }}</p>
+    <p>{{ edu.degree }}</p>
+    <p>{{ edu.cgpa }}</p>
+    <p>{{ edu.location }}</p>
+  </div>
+</div>
+<router-outlet></router-outlet>

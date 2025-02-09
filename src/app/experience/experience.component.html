@@ -1,0 +1,19 @@
+<div class="experience">
+  <h2>Experience</h2>
+  <div *ngFor="let exp of experience; let i = index" class="experience-item">
+    <!-- Use conditional binding for different logos -->
+    <img [src]="'assets/' + (i === 0 ? 'oracle.png' : 'ittiam.png')" 
+         alt="{{ exp.company }} logo" 
+         class="company-logo">
+    
+    <div class="experience-details">
+      <h3>{{ exp.company }}</h3>
+      <p class="duration">{{ exp.duration }}</p>
+      <p class="role">{{ exp.role }}</p>
+      <p class="location">{{ exp.location }}</p>
+      <ul>
+        <li *ngFor="let achievement of exp.achievements">{{ achievement }}</li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,119 @@
+/* ============================= */
+/*       PROJECTS SECTION        */
+/* ============================= */
+
+.projects {
+  padding: 40px 20px;
+  background-color: #f9f9f9; /* Light background for contrast */
+  text-align: center;
+}
+
+.projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #1976d2; /* Primary color */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Grid Layout for Projects */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Individual Project Cards */
+.project-card {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Project Image */
+.project-image {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* Project Details */
+.project-info h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.project-info p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* Project Link Button */
+.project-info a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #1976d2; /* Primary color */
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.project-info a:hover {
+  background-color: #0d47a1; /* Darker shade for hover */
+  transform: translateY(-2px);
+}
+
+/* Hover Effect */
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================= */
+/*       RESPONSIVE DESIGN       */
+/* ============================= */
+
+/* For Medium Screens (Tablets, Laptops) */
+@media (max-width: 1024px) {
+  .projects h2 {
+    font-size: 2rem;
+  }
+
+  .project-info h3 {
+    font-size: 1.5rem;
+  }
+
+  .project-info p {
+    font-size: 0.95rem;
+  }
+}
+
+/* For Small Screens (Phones) */
+@media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: 1fr; /* 1 project per row */
+  }
+
+  .project-info h3 {
+    font-size: 1.3rem;
+  }
+
+  .project-info p {
+    font-size: 0.9rem;
+  }
+}

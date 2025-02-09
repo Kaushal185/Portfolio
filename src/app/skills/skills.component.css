@@ -1,0 +1,96 @@
+/* ============================= */
+/*        SKILLS SECTION         */
+/* ============================= */
+
+.skills {
+  padding: 40px 20px;
+  background-color: #f9f9f9; /* Light background for contrast */
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 40px auto; /* Centering */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Heading */
+.skills h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #1976d2; /* Primary color */
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* Paragraphs */
+.skills p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Strong (Bold Text) */
+.skills p strong {
+  color: #333;
+  font-weight: bold;
+}
+
+/* Hover Effect */
+.skills:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* ============================= */
+/*        RESPONSIVE DESIGN      */
+/* ============================= */
+
+/* Medium Screens (Tablets, Small Laptops) */
+@media (max-width: 1024px) {
+  .skills {
+    padding: 35px 15px;
+    max-width: 700px;
+  }
+
+  .skills h2 {
+    font-size: 2rem;
+  }
+
+  .skills p {
+    font-size: 1rem;
+  }
+}
+
+/* Small Screens (Phones, Small Tablets) */
+@media (max-width: 768px) {
+  .skills {
+    padding: 30px 15px;
+    max-width: 90%;
+  }
+
+  .skills h2 {
+    font-size: 1.8rem;
+  }
+
+  .skills p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Extra Small Screens (Mobile Phones) */
+@media (max-width: 480px) {
+  .skills {
+    padding: 25px 10px;
+    max-width: 95%;
+  }
+
+  .skills h2 {
+    font-size: 1.6rem;
+  }
+
+  .skills p {
+    font-size: 0.9rem;
+  }
+}
