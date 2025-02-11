@@ -1,12 +1,16 @@
-/* General styling for the education section */
+/* ============================= */
+/*        EDUCATION SECTION      */
+/* ============================= */
+
 .education {
   font-family: 'Arial', sans-serif;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 0 auto; /* ✅ Center align */
   padding: 20px;
   background-color: #f9f9f9;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center; /* ✅ Center align text */
 }
 
 /* Heading styling */
@@ -21,16 +25,20 @@
 }
 
 /* Styling for each education entry */
-.education div {
+.education .edu-card {
   margin-bottom: 20px;
   padding: 15px;
   background-color: #fff;
   border-radius: 6px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center; /* ✅ Ensures text is centered */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* ✅ Centers content horizontally */
 }
 
-.education div:hover {
+.education .edu-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -39,16 +47,17 @@
 .institution {
   display: flex;
   align-items: center;
+  justify-content: center; /* ✅ Center align items */
+  gap: 10px;
   margin-bottom: 10px;
 }
 
 /* Logo styling */
 .logo {
-  width: 40px; /* Adjust size as needed */
-  height: 40px; /* Adjust size as needed */
-  margin-right: 10px;
-  border-radius: 50%; /* Optional: Makes the logo circular */
-  object-fit: cover; /* Ensures the logo fits well */
+  width: 50px; /* ✅ Slightly larger for visibility */
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 /* Institution name */
@@ -56,7 +65,7 @@
   font-size: 22px;
   font-weight: 600;
   color: #0073e6;
-  margin: 0; /* Remove default margin */
+  margin: 0;
 }
 
 /* Duration, degree, CGPA, and location */
@@ -76,4 +85,66 @@
 .education p:last-child {
   font-style: italic;
   color: #777;
+}
+
+/* ============================= */
+/*        RESPONSIVE DESIGN      */
+/* ============================= */
+
+/* Tablets and Small Screens */
+@media (max-width: 768px) {
+  .education {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .education h2 {
+    font-size: 24px;
+  }
+
+  .education .edu-card {
+    padding: 12px;
+  }
+
+  .logo {
+    width: 45px;
+    height: 45px;
+  }
+
+  .education h3 {
+    font-size: 20px;
+  }
+
+  .education p {
+    font-size: 15px;
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 480px) {
+  .education {
+    max-width: 95%;
+    padding: 12px;
+  }
+
+  .education h2 {
+    font-size: 22px;
+  }
+
+  .education .edu-card {
+    padding: 10px;
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .education h3 {
+    font-size: 18px;
+  }
+
+  .education p {
+    font-size: 14px;
+  }
 }

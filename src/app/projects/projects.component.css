@@ -1,17 +1,18 @@
 /* ============================= */
 /*       PROJECTS SECTION        */
 /* ============================= */
+
 .projects {
   padding: 60px 20px;
-  background-color: #f9f9f9; /* Light background for contrast */
+  background-color: #ffffff; /* Light background for contrast */
   text-align: center;
 }
 
 .projects h2 {
-  font-size: 2rem; /* Consistent with other sections */
+  font-size: 2rem;
   margin-bottom: 40px;
-  color: #000305; /* Primary color */
-  letter-spacing: 1px; /* Consistent with other sections */
+  color: #000305;
+  letter-spacing: 1px;
 }
 
 /* Grid Layout for Projects */
@@ -20,41 +21,48 @@
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 30px;
   justify-content: center;
+  align-items: center;
   padding: 20px;
 }
 
 /* Individual Project Cards */
 .project-card {
-  background-color: white;
-  border-radius: 20px; /* Consistent with other sections */
+  background-color: rgb(255, 253, 253);
+  border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: left;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align content to the left */
+  align-items: center; /* ✅ Center align content */
 }
 
-/* Project Image */
+/* Project Image / Icon */
 .project-image {
-  width: 100%;
-  max-height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
+  width: 150px;  /* ✅ Set a proper width */
+  height: 100px; /* ✅ Set a proper height */
+  object-fit: contain; /* ✅ Ensures the full icon is visible without cropping */
+  border-radius: 10px; /* ✅ Adds subtle rounded corners */
   margin-bottom: 15px;
+  display: block;
 }
+
 
 /* Project Details */
+.project-info {
+  text-align: center; /* ✅ Center align text */
+}
+
 .project-info h3 {
-  font-size: 1.5rem; /* Consistent with other sections */
+  font-size: 1.5rem;
   margin-bottom: 10px;
-  color: #333;
+  color: #161616;
 }
 
 .project-info p {
-  font-size: 1rem; /* Consistent with other sections */
-  color: #555;
+  font-size: 1rem;
+  color: #525151;
   line-height: 1.6;
   margin-bottom: 15px;
 }
@@ -64,22 +72,22 @@
   display: inline-block;
   margin-top: 15px;
   padding: 10px 20px;
-  background-color: #1976d2; /* Primary color */
+  background-color: #1976d2;
   color: white;
   text-decoration: none;
-  border-radius: 5px; /* Consistent with other sections */
+  border-radius: 5px;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  font-size: 1rem; /* Consistent with other sections */
+  font-size: 1rem;
 }
 
 .project-info a:hover {
-  background-color: #0d47a1; /* Darker shade for hover */
+  background-color: #0d47a1;
   transform: translateY(-2px);
 }
 
 /* Hover Effect */
 .project-card:hover {
-  transform: translateY(-5px); /* Subtle hover effect */
+  transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -105,11 +113,20 @@
 /* For Small Screens (Phones) */
 @media (max-width: 768px) {
   .project-grid {
-    grid-template-columns: 1fr; /* 1 project per row */
+    grid-template-columns: 1fr; /* ✅ 1 project per row */
+    justify-content: center;
   }
 
   .projects h2 {
     font-size: 1.6rem;
+  }
+
+  .project-card {
+    text-align: center;
+  }
+
+  .project-info {
+    text-align: center;
   }
 
   .project-info h3 {

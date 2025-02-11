@@ -1,0 +1,146 @@
+/* ============================= */
+/*          NAVBAR STYLES        */
+/* ============================= */
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    background-color: #1976d2; /* Primary color */
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 60px; /* Fixed height */
+  }
+  
+  /* Navbar Branding */
+  .navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  /* Spacer for alignment */
+  .spacer {
+    flex: 1;
+  }
+  
+  /* Navigation Links */
+  .nav-links {
+    display: flex;
+    gap: 16px;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #e3f2fd;
+  }
+  
+  /* Active Link Styling */
+  .nav-links a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #e3f2fd;
+  }
+  
+  /* Mobile Menu Toggle Button */
+  .menu-toggle {
+    display: none; /* Hide by default */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  /* ============================= */
+  /*        RESPONSIVE DESIGN      */
+  /* ============================= */
+  
+  /* Tablet Screens (Below 1024px) */
+  @media (max-width: 1024px) {
+    .toolbar {
+      padding: 10px 16px;
+    }
+  
+    .nav-links {
+      gap: 12px;
+    }
+  
+    .nav-links a {
+      font-size: 15px;
+      padding: 6px 10px;
+    }
+  }
+  
+  /* Mobile Screens (Below 768px) */
+  @media (max-width: 768px) {
+    .toolbar {
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+      padding: 10px 16px;
+    }
+  
+    .navbar-brand {
+      font-size: 22px;
+    }
+  
+    .menu-toggle {
+      display: block; /* Show menu button */
+    }
+  
+    .nav-links {
+      display: none; /* Hide links by default */
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+      background-color: #1976d2; /* Match toolbar background */
+      padding: 10px 0;
+    }
+  
+    .nav-links.show {
+      display: flex; /* Show menu when toggled */
+    }
+  
+    .nav-links a {
+      font-size: 16px;
+      padding: 10px;
+      width: 100%;
+    }
+  }
+  
+  /* Extra Small Screens (Below 480px) */
+  @media (max-width: 480px) {
+    .toolbar {
+      padding: 8px 12px;
+    }
+  
+    .navbar-brand {
+      font-size: 20px;
+    }
+  
+    .menu-toggle {
+      font-size: 22px;
+    }
+  
+    .nav-links a {
+      font-size: 14px;
+      padding: 8px;
+    }
+  }
+  

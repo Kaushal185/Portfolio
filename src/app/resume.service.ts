@@ -53,24 +53,28 @@ export class ResumeService {
           technologies: 'Java, Spring Boot, WebRTC, WebSocket',
           description: 'Created a real-time video conferencing app supporting over 100 users, utilizing WebRTC for HD video and WebSocket for low-latency communication. Reduced server response time by 30% and secured session management with Spring Boot.',
           link: 'https://github.com/Kaushal185/Meeting-App',
+          icon: 'meeting-app.png', // ✅ Added icon for project
         },
         {
           title: 'DigiBank',
           technologies: 'Spring-Boot, Angular, MySQL, Netlify',
           description: 'Created a full-stack digital banking application using Angular 15, Spring Boot, and MySQL, enabling real-time transactions, transaction history, and user authentication services.',
           link: 'https://github.com/Kaushal185/DigiBank',
+          icon: 'digibank.png', // ✅ Added icon for project
         },
         {
           title: 'Microservices E-Commerce System',
           technologies: 'Apache Kafka, Spring Boot, Angular',
           description: 'Designed and prepared a scalable microservices framework leveraging Apache Kafka, resulting in a 40% increase in data throughput, enabling seamless integration across 10+ business-critical applications. Optimized message processing and reduced latency by implementing efficient Kafka consumers, resulting in a 20% improvement in data throughput.',
           link: 'https://drive.google.com/file/d/19dAMGGHHCoOqBUuBHS-cl-i87D5bbvai/view?usp=sharing',
+          icon: 'ecommerce.png', // ✅ Added icon for project
         },
         {
           title: 'PhonePe Clone',
           technologies: 'Android, Java, Firebase',
           description: 'Developed a mobile payment application inspired by PhonePe, enabling users to perform secure and instant transactions using UPI. Added features like money transfer, bill payments, and transaction history with real-time updates using Firebase as the backend.',
           link: 'https://github.com/Kaushal185/PhonePayCloneAndroid',
+          icon: 'phonepe.png', // ✅ Added icon for project
         },
       ],
       skills: {

@@ -7,11 +7,12 @@ import { SkillsComponent } from "./skills/skills.component";
 import { MatToolbarModule } from '@angular/material/toolbar'; // ✅ Import MatToolbarModule
 import { MatButtonModule } from '@angular/material/button'; // ✅ Import MatButtonModule
 import { ResumeService } from './resume.service';
+import { NavbarComponent } from './navbar/navbar.component';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  imports: [HeaderComponent, EducationComponent, ExperienceComponent, ProjectsComponent, SkillsComponent,MatToolbarModule,MatButtonModule]
+  imports: [NavbarComponent,HeaderComponent, EducationComponent, ExperienceComponent, ProjectsComponent, SkillsComponent,MatToolbarModule,MatButtonModule]
 })
 export class AppComponent implements AfterViewInit,OnInit {
   contactInfo: any;

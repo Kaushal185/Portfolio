@@ -1,13 +1,9 @@
 /* ============================= */
 /*          GLOBAL STYLES        */
 /* ============================= */
+
 html {
   scroll-behavior: smooth;
-}
-
-.section > * {
-  margin-top: 0;
-  padding-top: 0;
 }
 
 body {
@@ -16,86 +12,45 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  text-align: center; /* ✅ Center align all text globally */
 }
 
 /* ============================= */
 /*          NAVBAR STYLES        */
 /* ============================= */
-.toolbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 24px;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
-  background-color: #1976d2; /* Primary color */
-  color: white;
-  position: fixed; /* Fixed position */
-  width: 100%;
+
+app-navbar {
+  position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
   z-index: 1000;
-  height: 60px; /* Consistent navbar height */
-}
-
-.content {
-  margin-top: 60px; /* Push content down to avoid navbar overlap */
-}
-
-.navbar-brand {
-  font-size: 24px;
-  font-weight: bold;
-  color: white;
-  transition: color 0.3s ease-in-out;
-}
-
-.navbar-brand:hover {
-  color: #e3f2fd; /* Light blue on hover */
-}
-
-.spacer {
-  flex: 1; /* Pushes the nav-links to the right */
-}
-
-.nav-links {
-  display: flex;
-  gap: 16px;
-}
-
-.nav-links a {
-  font-size: 17px;
-  font-weight: 500;
-  color: white;
-  text-decoration: none;
-  transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
-  padding: 8px 15px;
-}
-
-.nav-links a:hover {
-  color: #e3f2fd; /* Light blue on hover */
-  transform: scale(1.05);
-}
-
-.nav-links a.active-link {
-  font-weight: bold;
-  color: #e3f2fd !important;
-  border-bottom: 2px solid #e3f2fd;
+  background: #1976d2;
 }
 
 /* ============================= */
 /*       CONTENT WRAPPER         */
 /* ============================= */
+
 .content {
-  flex: 1; /* Takes up remaining space */
-  padding: 24px;
-  max-width: 1200px;
-  margin: 0 auto;
+  flex: 1;
+  padding: 40px 20px; /* ✅ Added better padding */
+  max-width: 1100px; /* ✅ Keep content width consistent */
+  margin: 100px auto 0; /* ✅ Ensures navbar does not overlap content */
   width: 100%;
   box-sizing: border-box;
+}
+
+/* Ensure sections take up full width */
+.section {
+  width: 100%;
+  padding: 40px 0; /* ✅ Increased spacing for consistency */
 }
 
 /* ============================= */
 /*          FOOTER STYLES        */
 /* ============================= */
+
 .footer {
   background-color: #1976d2;
   color: white;
@@ -110,11 +65,13 @@ body {
   margin: 0 auto;
 }
 
+/* Social Links */
 .social-links {
   margin-top: 10px;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  align-items: center;
+  gap: 15px; /* ✅ Reduced gap for better spacing */
 }
 
 .social-icon {
@@ -134,112 +91,59 @@ body {
   color: #e3f2fd;
 }
 
-
 /* ============================= */
 /*        RESPONSIVE DESIGN      */
 /* ============================= */
 
 /* Medium Screens (Tablets & Small Laptops) */
 @media (max-width: 1024px) {
-  .toolbar {
-    padding: 10px 18px;
-  }
-
-  .nav-links {
-    gap: 12px;
-  }
-
-  .nav-links a {
-    font-size: 16px;
-    padding: 6px 12px;
-  }
-
   .content {
-    padding: 20px;
+    padding: 30px;
     max-width: 90%;
+    margin-top: 120px;
+  }
+
+  .section {
+    padding: 30px 0;
   }
 
   .footer {
     font-size: 0.9rem;
     padding: 15px;
-  }
-
-  .contact-info p {
-    font-size: 0.9rem;
   }
 }
 
 /* Small Screens (Phones & Small Tablets) */
 @media (max-width: 768px) {
-  .toolbar {
-    flex-direction: column;
-    padding: 8px 15px;
-    text-align: center;
-    height: auto; /* Allow navbar to expand */
-  }
-
-  .navbar-brand {
-    font-size: 22px;
-    margin-bottom: 10px;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .nav-links a {
-    font-size: 16px;
-    display: block;
-    padding: 8px 0;
-  }
-
   .content {
-    padding: 15px;
+    padding: 20px;
     max-width: 95%;
-    margin-top: 100px; /* Adjust for expanded navbar */
+    margin-top: 130px;
+  }
+
+  .section {
+    padding: 25px 0;
   }
 
   .footer {
     font-size: 0.85rem;
     padding: 12px;
-  }
-
-  .contact-info p {
-    font-size: 0.85rem;
   }
 }
 
 /* Extra Small Screens (Mobile Phones) */
 @media (max-width: 480px) {
-  .toolbar {
-    padding: 6px 12px;
-  }
-
-  .navbar-brand {
-    font-size: 20px;
-  }
-
-  .nav-links {
-    gap: 6px;
-  }
-
-  .nav-links a {
-    font-size: 15px;
-    padding: 5px 0;
-  }
-
   .content {
-    padding: 12px;
-    margin-top: 120px; /* Adjust for expanded navbar */
+    padding: 15px;
+    margin-top: 150px;
+  }
+
+  .section {
+    padding: 20px 0;
   }
 
   .footer {
     font-size: 0.8rem;
     padding: 10px;
-  }
-
-  .contact-info p {
-    font-size: 0.8rem;
   }
 }
